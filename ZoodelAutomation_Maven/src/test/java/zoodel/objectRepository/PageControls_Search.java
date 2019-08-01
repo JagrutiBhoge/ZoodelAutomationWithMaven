@@ -96,5 +96,10 @@ public class PageControls_Search {
 		public By productRowCollectionst = By
 				.xpath("//div[contains(@class, 'myacc_sellarbox')]");
 		public By productNameTextst = By.tagName("h3");
+		public By menuSeller = By
+				.xpath("//ul[contains(@class,'nav')]//descendant::a[contains(@href,'manageProducts')]");
+		public By lblStatusCollection = By
+				.xpath("//div[@class='my-account-right-box-inside-top']");
+		public By lblStatus = By.tagName("label");
 	
 }

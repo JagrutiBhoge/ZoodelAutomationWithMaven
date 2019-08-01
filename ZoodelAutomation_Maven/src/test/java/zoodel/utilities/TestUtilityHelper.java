@@ -46,7 +46,7 @@ public class TestUtilityHelper {
 	 */
 
 	//Capture screenshot for fail test case
-	public void captureScreenshot(WebDriver driver, String screenshotName) {
+	public static void captureScreenshot(WebDriver driver, String screenshotName) {
 
 		try {
 			//if exist screenshot then its delete

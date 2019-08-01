@@ -45,10 +45,10 @@ public class TestCase_SearchInnerPage extends TestBase {
 		pageMethods.goToMyAccount();
 		Thread.sleep(3000);
 		log.info("Click on Seller Tools (Menu)");
-		frameworkMethods.clickOnLink(pageControlsSellerTools.menuSeller);
+		frameworkMethods.clickOnLink(pageControlsSearch.menuSeller);
 		Thread.sleep(2000);
 		log.info("Verify product status  (call to getStatus function).");
-		pageMethodSellerTool.getProductStatusAndPublishProduct(strProductName);
+		//pageMethodSellerTool.getProductStatusAndPublishProduct(strProductName);
 		Thread.sleep(2000);
 	}
 
@@ -1188,7 +1188,7 @@ public class TestCase_SearchInnerPage extends TestBase {
 	// Verify contact seller popup functionality.
 	// Verify registration form popup is open or not when user fill form without
 	// login (In product tab)
-	@Test(priority = 44, groups = { "Regression" })
+	/*@Test(priority = 44, groups = { "Regression" })
 	public void verifyContactSellerPopupInProductTab() throws Exception {
 
 		log.info("Click on logout  link");
@@ -1380,7 +1380,7 @@ public class TestCase_SearchInnerPage extends TestBase {
 		}
 	}
 
-	// Verify contact seller popup functionality.
+	/* // Verify contact seller popup functionality.
 	// Verify registration form popup is open or not when user fill form without
 	// login (In Seller tab)
 	@Test(priority = 48, groups = { "Regression" })
@@ -1395,65 +1395,6 @@ public class TestCase_SearchInnerPage extends TestBase {
 		// log.info("Call sendContactSellerPopupInSearhPage function.");
 		// pageMethodsAllPopup.sendContactSellerPopupInSearhPage(testDataLogin.invalidEmail);
 		Thread.sleep(1000);
-
-		/*
-		 * log.info("Clear Product name.");
-		 * frameworkMethods.clear_Text(pageControlAllPopups.txtProductNamePopup)
-		 * ; Thread.sleep(1000); log.info("Enter Product Name");
-		 * frameworkMethods.enter_Text(pageControlAllPopups.txtProductNamePopup,
-		 * enum_addProduct.productName.getValue(lang)); Thread.sleep(1000);
-		 * log.info("Clear Message.");
-		 * frameworkMethods.clear_Text(pageControlAllPopups.
-		 * txtMessageInContactSeller); Thread.sleep(1000);
-		 * log.info("Enter Message.");
-		 * frameworkMethods.enter_Text(pageControlAllPopups.
-		 * txtMessageInContactSeller,
-		 * enum_allPopups.description.getValue(lang));
-		 * log.info("Clear Quantity textbox.");
-		 * frameworkMethods.clear_Text(pageControlAllPopups.
-		 * txtQuantityInContactSeller); Thread.sleep(1000);
-		 * log.info("Enter Quantity in quantity textbox");
-		 * frameworkMethods.enter_Text(pageControlAllPopups.
-		 * txtQuantityInContactSeller,
-		 * enum_addProduct.minimumOrderQuantity.getValue(lang));
-		 * Thread.sleep(1000);
-		 * 
-		 * log.info("Select Unit.");
-		 * frameworkMethods.select_Value_On_DropDown(pageControlAllPopups.
-		 * ddlQuantityUnitInContactSeller,
-		 * enum_addProduct.exwPriceUnit.getValue(lang)); Thread.sleep(1000); //
-		 * log.info("Attach Product Details.docx file."); //
-		 * frameworkMethods.ImageUpload(pageControlAllPopups.attachFile, //
-		 * testDataCommon.attachDocxFile); log.info("Clear Name.");
-		 * frameworkMethods.clear_Text(pageControlAllPopups.
-		 * txtNameInContactSeller); Thread.sleep(1000); log.info("Enter Name.");
-		 * frameworkMethods.enter_Text(pageControlAllPopups.
-		 * txtNameInContactSeller, enum_mainContact.firstName.getValue(lang) +
-		 * "" + enum_mainContact.lastName.getValue(lang)); Thread.sleep(1000);
-		 * log.info("Clear Email.");
-		 * frameworkMethods.clear_Text(pageControlAllPopups.
-		 * txtEmailInContactSeller); Thread.sleep(1000);
-		 * log.info("Enter Email.");
-		 * frameworkMethods.enter_Text(pageControlAllPopups.
-		 * txtEmailInContactSeller, testDataLogin.invalidEmail);
-		 * Thread.sleep(1000); log.info("Clear Country Code.");
-		 * frameworkMethods.clear_Text(pageControlAllPopups.
-		 * txtCountryCodeInContactSeller); Thread.sleep(1000);
-		 * log.info("Enter Country Code.");
-		 * frameworkMethods.enter_Text(pageControlAllPopups.
-		 * txtCountryCodeInContactSeller,
-		 * enum_mainContact.mobileCountryCode.getValue(lang));
-		 * Thread.sleep(1000); log.info("Clear mobile Number.");
-		 * frameworkMethods.clear_Text(pageControlAllPopups.
-		 * txtNumberInContactSeller); Thread.sleep(1000);
-		 * log.info("Enter mobile Number.");
-		 * frameworkMethods.enter_Text(pageControlAllPopups.
-		 * txtNumberInContactSeller,
-		 * enum_mainContact.mobileNumber.getValue(lang)); Thread.sleep(1000);
-		 * log.info("Click on Send Requirement at Requirement form.");
-		 * frameworkMethods.clickOnLink(pageControlAllPopups.
-		 * btnSubmitYourRequirement);
-		 */
 
 		log.info("Call sendContactSellerPopupInSearhPage function.");
 		pageMethodsAllPopup.sendContactSellerPopupInSearhPage(testDataLogin.invalidEmail);
@@ -1474,7 +1415,7 @@ public class TestCase_SearchInnerPage extends TestBase {
 		frameworkMethods.clickOnLink(pageControlsStaticPages.btnClosePopup);
 		Thread.sleep(2000);
 
-	}
+	} 
 
 	// Verify required field validation message in contact seller pop up.(In
 	// Seller tab)
@@ -1678,7 +1619,7 @@ public class TestCase_SearchInnerPage extends TestBase {
 	// 2)Verify focus is going to Message text field in Send your requirements
 	// to this sellers form or not
 	// @Test(priority = 53, groups = { "Regression" })
-	public void verifyContactSellerBtnRedirctToSellerDetail() throws Exception {
+	/*public void verifyContactSellerBtnRedirctToSellerDetail() throws Exception {
 		String strSellerNameExpect = frameworkMethods.get_LableText(pageControlsSearch.lblsellerName);
 		log.info("Click on Search page.");
 		frameworkMethods.clickOnLink(pageControlsSearch.tabSellerClick);
@@ -1695,6 +1636,6 @@ public class TestCase_SearchInnerPage extends TestBase {
 		boolean focusElement = driver.findElement(pageControlAllPopups.txtMsgSendYourMsgSupplier)
 				.equals(driver.switchTo().activeElement());
 		Assert.assertEquals(focusElement, true, "Focus is not display in message text field.");
-	}
+	} */
 
 }

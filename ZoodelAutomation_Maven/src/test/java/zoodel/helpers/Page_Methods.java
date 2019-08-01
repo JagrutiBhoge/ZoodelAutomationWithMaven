@@ -28,20 +28,20 @@ public class Page_Methods extends TestBase {
 		try {
 			log.info("Click on login link.");
 			frameworkMethods.clickOnLink(pageControlsLogin.lnkLogin);
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			log.info("Enter the email id." + email);
 			frameworkMethods.clear_Text(pageControlsLogin.txtEmail);
 			Thread.sleep(1000);
 			frameworkMethods.enterTextJavaScript(pageControlsLogin.txtEmail, email);
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			log.info("Enter the password." + password);
 			frameworkMethods.clear_Text(pageControlsLogin.txtPassword);
 			Thread.sleep(1000);
 			frameworkMethods.enterTextJavaScript(pageControlsLogin.txtPassword, password);
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			log.info("Click on Login button.");
 			frameworkMethods.clickOnLink(pageControlsLogin.btnLogin);
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			// Thread.sleep(5000);
 
 		} catch (Exception e) {

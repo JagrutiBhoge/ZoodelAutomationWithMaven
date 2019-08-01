@@ -1,6 +1,5 @@
 package zoodel.testcase;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -11,7 +10,6 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -19,6 +17,7 @@ import org.testng.annotations.Test;
 
 import zoodel.base.TestBase;
 import zoodel.testdata.*;
+
 
 public class TestCase_Login extends TestBase {
 	private static final Logger log = Logger.getLogger(TestCase_Login.class.getName());
@@ -64,19 +63,20 @@ public class TestCase_Login extends TestBase {
 
 	@Test(priority = 1, groups = { "Smoke" })
 	public void userSuccessfullyLoggedIn() throws Exception {
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 		log.info("Call login function.");
 		pageMethods.loggedIn(testDataLogin.userEmail, testDataLogin.userPassword);
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		// driver.navigate().refresh();
-		Thread.sleep(3000);
+		Assert.fail("User is not login sucessfully");
+		Thread.sleep(1000);
 		log.info("Verify the user is login.");
 		boolean result = driver.findElement(pageControlsLogin.loginName).isDisplayed();
 		// frameworkMethods.IsPresentLocator(pageControlsLogin.loginName);
 		Assert.assertEquals(result, true, "User does not logged In.");
 	}
 
-	@Test(priority = 2, groups = { "Smoke" })
+	//@Test(priority = 2, groups = { "Smoke" })
 	public void userSuccessfullyLoggedOut() throws Exception {
 		pageMethods.loggedOut();
 		Thread.sleep(2000);
@@ -86,7 +86,7 @@ public class TestCase_Login extends TestBase {
 
 	}
 
-	@Test(priority = 3, groups = { "Regression" })
+	//@Test(priority = 3, groups = { "Regression" })
 	public void userInvalidLoginAttempt() throws Exception {
 		Thread.sleep(3000);
 		pageMethods.loggedIn(testDataLogin.invalidEmailInLogin, "password");
@@ -98,7 +98,7 @@ public class TestCase_Login extends TestBase {
 	}
 
 	// Verify enter key is working or not
-	@Test(priority = 4, groups = { "Regression" })
+	//@Test(priority = 4, groups = { "Regression" })
 	public void verifyLoginWithEnterKey() throws Exception {
 		driver.navigate().refresh();
 		Thread.sleep(5000);
@@ -123,28 +123,6 @@ public class TestCase_Login extends TestBase {
 
 	}
 
-	/*
-	 * @AfterClass public void setUpIntializationAfterClass() {
-	 * 
-	 * int rownum = 0;   Set<String> keyset = testresultdata.keySet();    
-	 *     for (String key : keyset) {
-	 *         Row row = sheet.createRow(rownum++);
-	 *         Object [] objArr = testresultdata.get(key);
-	 *         int cellnum = 0;         for (Object obj : objArr) {
-	 *             Cell cell = row.createCell(cellnum++);
-	 *                 cell.setCellValue((Date)obj);
-	 *               if(obj instanceof Date) 
-	 *           else if(obj instanceof Boolean)
-	 *                 cell.setCellValue((Boolean)obj);
-	 *             else if(obj instanceof String)
-	 *                 cell.setCellValue((String)obj);
-	 *             else if(obj instanceof Double)
-	 *                 cell.setCellValue((Double)obj);         }     }     try {
-	 *         FileOutputStream out =new FileOutputStream(new File(
-	 * "TestResult.xls"));         workbook.write(out);         out.close();
-	 *         System.out.println("Excel written successfully..");          
-	 *     } catch (FileNotFoundException e) {         e.printStackTrace();
-	 *     } catch (IOException e) {         e.printStackTrace();     } }
-	 */
+	
 
 }

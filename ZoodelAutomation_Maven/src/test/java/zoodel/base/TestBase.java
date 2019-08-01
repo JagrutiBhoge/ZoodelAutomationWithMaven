@@ -32,6 +32,7 @@ public class TestBase {
 	//public static HtmlUnitDriver driver1;
 	public static RemoteWebDriver driver2;
 	private static Logger log = Logger.getLogger(TestBase.class.getName());
+	//private static Logger log = Logger.getLogger("devpinoyLogger");
 	public static enum_language lang;
 	
 	// ========================= pageControls objects =========================
@@ -40,7 +41,9 @@ public class TestBase {
 	public static PageControls_Search pageControlsSearch = new PageControls_Search();
 	public static PageControls_StaticPages pageControlsStaticPages = new PageControls_StaticPages();
 	public static PageControls_AllPopups pageControlAllPopups = new PageControls_AllPopups();
-	
+	public static PageControls_HomePage pageControlsHomePage = new PageControls_HomePage();
+	public static PageControls_AddProduct pageControlsAddProduct = new PageControls_AddProduct();
+
 	// ========================= pageMethods objects =========================
 	public static Page_Methods pageMethods = new Page_Methods();
 	public static Framework_Methods frameworkMethods = new Framework_Methods();

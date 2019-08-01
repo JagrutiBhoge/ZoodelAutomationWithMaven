@@ -12,6 +12,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="src/test/resources/properties"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -22,7 +23,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+	<classpathentry excluding="**|properties/|properties/" kind="src" output="target/test-classes" path="src/test/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
@@ -30,5 +31,23 @@
 	<classpathentry kind="lib" path="C:/JavaWorkspace/AutomationTesting/lib/poi-3.16.jar"/>
 	<classpathentry kind="lib" path="C:/JavaWorkspace/AutomationTesting/lib/ant-1.7.0.jar"/>
 	<classpathentry kind="lib" path="C:/JavaWorkspace/AutomationTesting/lib/selenium-server-standalone-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jagruti/.m2/repository/javax/mail/mail/1.4.7/mail-1.4.7.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="javax.mail"/>
+			<attribute name="maven.artifactId" value="mail"/>
+			<attribute name="maven.version" value="1.4.7"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Jagruti/.m2/repository/com/relevantcodes/extentreports/2.41.0/extentreports-2.41.0.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="com.relevantcodes"/>
+			<attribute name="maven.artifactId" value="extentreports"/>
+			<attribute name="maven.version" value="2.41.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
