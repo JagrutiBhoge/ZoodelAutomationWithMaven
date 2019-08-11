@@ -74,6 +74,7 @@ public class TestCase_Login extends TestBase {
 		boolean result = driver.findElement(pageControlsLogin.loginName).isDisplayed();
 		// frameworkMethods.IsPresentLocator(pageControlsLogin.loginName);
 		Assert.assertEquals(result, true, "User does not logged In.");
+	
 	}
 
 	//@Test(priority = 2, groups = { "Smoke" })

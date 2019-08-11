@@ -7,7 +7,7 @@ public class TestData_Common {
 	static WebDriver driver;
      
 	//public final String url_staging ="http://staging-www.zoodel.com";
-	public final String url_staging ="https://staging-www.zoodel.com/en";  //"https://www.zoodel.com";  "http://qa.zoodel.com:3333/en"; //"http://lebanon.zoodel.com/en";  //"http://staging.zoodel.com/";
+	public final String url_staging ="https://www.zoodel.com"; //"https://staging-www.zoodel.com/en";  // "http://qa.zoodel.com:3333/en"; //"http://lebanon.zoodel.com/en";  //"http://staging.zoodel.com/";
 	
 			
 	// Back office url
