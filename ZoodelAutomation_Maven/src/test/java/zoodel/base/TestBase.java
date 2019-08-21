@@ -80,10 +80,11 @@ public class TestBase {
 		log.info("Open URL function.");
 		OpenUrl(testDataCommon.url_staging);
 		Thread.sleep(5000);
-		log.info("Close adverting popup when advertising popup is  display on screen.");
-		pageMethods.closeAdvertisingPopup();
+		/*log.info("Close adverting popup when advertising popup is  display on screen.");
+		//pageMethods.closeAdvertisingPopup();
 		Thread.sleep(3000);
 		log.info("Language selection");
+	
 		if (strLang == null) {
 			strLang = "en";
 		}
@@ -93,7 +94,7 @@ public class TestBase {
 		
 		log.info("Select language from public side");
 		pageMethods.LanguageSelectionInPublic();
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
 	}
 
 	// Use TestCleanup to run code after each test has run
