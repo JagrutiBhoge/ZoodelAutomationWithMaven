@@ -13,11 +13,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src/test/resources/properties"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -31,7 +26,6 @@
 	<classpathentry kind="lib" path="C:/JavaWorkspace/AutomationTesting/lib/poi-3.16.jar"/>
 	<classpathentry kind="lib" path="C:/JavaWorkspace/AutomationTesting/lib/ant-1.7.0.jar"/>
 	<classpathentry kind="lib" path="C:/JavaWorkspace/AutomationTesting/lib/selenium-server-standalone-3.0.0.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_211"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_191"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

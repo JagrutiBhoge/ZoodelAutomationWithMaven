@@ -95,6 +95,7 @@ public class TestBase {
 		log.info("Select language from public side");
 		pageMethods.LanguageSelectionInPublic();
 		Thread.sleep(3000);*/
+		
 	}
 
 	// Use TestCleanup to run code after each test has run
