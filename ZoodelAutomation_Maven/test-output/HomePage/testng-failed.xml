@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [HomePage]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="zoodel.listeners.CustomListeners"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="zoodel.testcase.TestCase_HomePageLink">
+        <methods>
+          <include name="aftersuit"/>
+          <include name="closeBrowser"/>
+          <include name="setUpBeforeMethodInitialization"/>
+          <include name="openBrowser"/>
+          <include name="setUpForScript"/>
+          <include name="CheckTitleOfHomePageLink"/>
+        </methods>
+      </class> <!-- zoodel.testcase.TestCase_HomePageLink -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test name="Sample Test(failed)">
+    <classes>
+      <class name="zoodel.testcase.SampleExtendReport">
+        <methods>
+          <include name="isSkip"/>
+          <include name="aftersuit"/>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+          <include name="doUserReg"/>
+          <include name="setUpForScript"/>
+        </methods>
+      </class> <!-- zoodel.testcase.SampleExtendReport -->
+    </classes>
+  </test> <!-- Sample Test(failed) -->
+</suite> <!-- Failed suite [HomePage] -->

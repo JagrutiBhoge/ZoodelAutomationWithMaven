@@ -32,6 +32,8 @@ public class Framework_Methods extends TestBase {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 
+	
+	
 	public void waitTillElementDisappears(By locator) throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));

@@ -3,79 +3,237 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Test Login</title>
+  <title>Test Results Report - Test</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Test Login</h1>
+<h1>Test</h1>
 <p>
-  Test duration: 195.713s
+  Test duration: 20.533s
 </p>
 
-
-
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">zoodel.testcase.TestCase_Login</td>
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">zoodel.testcase.TestCase_HomePageLink</td>
       </tr>
             
 <tr>
   <td class="method">
-                  userSuccessfullyLoggedIn
+                  setUpBeforeMethodInitialization
       </td>
   <td class="duration">
-    11.314s
+    0.000s
   </td>
   <td class="result">
         
+          <i>Method arguments: </i><span class="arguments">public void zoodel.testcase.TestCase_HomePageLink.CheckTitleOfHomePageLink(java.util.Hashtable) throws java.lang.Exception</span><br />
     
-            <div class="testOutput">
-                        Click to see screenshot
-                                <a target="_blank" href=C:\Users\Jagruti\git\ZoodelAutomationWithMaven\ZoodelAutomation_Maven/Screenshots/userSuccessfullyLoggedIn.png >Screenshot for fail Test</a>
-                                <br>
-                                <br>
-                                <a target="_blank" href=C:\Users\Jagruti\git\ZoodelAutomationWithMaven\ZoodelAutomation_Maven/Screenshots/userSuccessfullyLoggedIn.png><img src=C:\Users\Jagruti\git\ZoodelAutomationWithMaven\ZoodelAutomation_Maven/Screenshots/userSuccessfullyLoggedIn.png height=200 width=200></img></a>
-                  </div>
-    
+        
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: User is not login sucessfully</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
     <div class="stackTrace" id="exception-0">
-              org.testng.Assert.fail(Assert.java:96)<br />
-              zoodel.testcase.TestCase_Login.userSuccessfullyLoggedIn(TestCase_Login.java:71)<br />
+              zoodel.testcase.TestCase_HomePageLink.setUpBeforeMethodInitialization(TestCase_HomePageLink.java:43)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
               java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:583)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:599)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)<br />
               org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
-              org.testng.TestRunner.run(TestRunner.java:505)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:364)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:744)<br />
+              org.testng.TestRunner.run(TestRunner.java:602)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:380)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:289)<br />
               org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1137)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1049)<br />
-              org.testng.TestNG.run(TestNG.java:1017)<br />
-              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br />
-              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br />
-              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1226)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1144)<br />
+              org.testng.TestNG.run(TestNG.java:1115)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
                 </div>
       </td>
 </tr>
+<tr>
+  <td class="method">
+                  setUpBeforeMethodInitialization
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">public void zoodel.testcase.TestCase_HomePageLink.CheckTitleOfHomePageLink(java.util.Hashtable) throws java.lang.Exception</span><br />
+    
+        
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              zoodel.testcase.TestCase_HomePageLink.setUpBeforeMethodInitialization(TestCase_HomePageLink.java:43)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:599)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:744)<br />
+              org.testng.TestRunner.run(TestRunner.java:602)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:380)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:289)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1226)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1144)<br />
+              org.testng.TestNG.run(TestNG.java:1115)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUpBeforeMethodInitialization
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">public void zoodel.testcase.TestCase_HomePageLink.CheckTitleOfHomePageLink(java.util.Hashtable) throws java.lang.Exception</span><br />
+    
+        
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              zoodel.testcase.TestCase_HomePageLink.setUpBeforeMethodInitialization(TestCase_HomePageLink.java:43)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:599)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:744)<br />
+              org.testng.TestRunner.run(TestRunner.java:602)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:380)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:289)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1226)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1144)<br />
+              org.testng.TestNG.run(TestNG.java:1115)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                </div>
+      </td>
+</tr>
+    
       </table>
 
+
+
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">zoodel.testcase.TestCase_HomePageLink</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  CheckTitleOfHomePageLink
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+            <div class="testOutput">
+                        Click to see screenshot
+                                <a target="_blank" href="./Screenshots/CheckTitleOfHomePageLink.png">Screenshot for Skip Test</a>
+                                <br>
+                                <br>
+                                <a target="_blank" href="./Screenshots/CheckTitleOfHomePageLink.png"><img src="./Screenshots/CheckTitleOfHomePageLink.png" height=200 width=200></img></a>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CheckTitleOfHomePageLink
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+            <div class="testOutput">
+                        Click to see screenshot
+                                <a target="_blank" href="./Screenshots/CheckTitleOfHomePageLink.png">Screenshot for Skip Test</a>
+                                <br>
+                                <br>
+                                <a target="_blank" href="./Screenshots/CheckTitleOfHomePageLink.png"><img src="./Screenshots/CheckTitleOfHomePageLink.png" height=200 width=200></img></a>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CheckTitleOfHomePageLink
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+    
+            <div class="testOutput">
+                        Click to see screenshot
+                                <a target="_blank" href="./Screenshots/CheckTitleOfHomePageLink.png">Screenshot for Skip Test</a>
+                                <br>
+                                <br>
+                                <a target="_blank" href="./Screenshots/CheckTitleOfHomePageLink.png"><img src="./Screenshots/CheckTitleOfHomePageLink.png" height=200 width=200></img></a>
+                  </div>
+    
+
+      </td>
+</tr>
+      </table>
 
   
 </body>

@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+  <test name="Default test(failed)">
     <classes>
       <class name="zoodel.testcase.TestCase_HomePageLink">
         <methods>
+          <include name="aftersuit"/>
+          <include name="CheckTitleOfHomePageLink2" invocation-numbers="0 1"/>
           <include name="closeBrowser"/>
+          <include name="tearDown"/>
+          <include name="setUpBeforeMethodInitialization"/>
           <include name="openBrowser"/>
           <include name="setUpForScript"/>
-          <include name="CheckTitleOfHomePageLink"/>
+          <include name="CheckTitleOfHomePageLink" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- zoodel.testcase.TestCase_HomePageLink -->
     </classes>

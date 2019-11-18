@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
-           tests="1"
+<testsuite name="Sample Test"
+           tests="3"
            failures="1"
            errors="0"
-           skipped="0"
-           time="94.239">
+           skipped="1"
+           time="0.028">
   <properties />
-            <testcase name="userSuccessfullyLoggedIn" time="94.239" classname="zoodel.testcase.TestCase_Login">
+            <testcase name="doUserReg" time="0.010" classname="zoodel.testcase.SampleExtendReport">
                 <failure type="java.lang.AssertionError"
-                  message="User is not login sucessfully"
+                  message="User Reg Test Failed"
               >
-<![CDATA[java.lang.AssertionError: User is not login sucessfully
+<![CDATA[java.lang.AssertionError: User Reg Test Failed
   org.testng.Assert.fail(Assert.java:93)
-  zoodel.testcase.TestCase_Login.userSuccessfullyLoggedIn(TestCase_Login.java:72)
+  zoodel.testcase.SampleExtendReport.doUserReg(SampleExtendReport.java:70)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -43,6 +43,10 @@
 
           </testcase>
   
+            <testcase name="isSkip" time="0.0" classname="zoodel.testcase.SampleExtendReport">
+          <skipped />
+    </testcase>
   
-  
+            <testcase name="doLogin" time="0.017" classname="zoodel.testcase.SampleExtendReport" />
+      
 </testsuite>

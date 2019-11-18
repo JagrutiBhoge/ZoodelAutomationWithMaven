@@ -14,11 +14,17 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import zoodel.objectRepository.*;
 import zoodel.testdata.*;
@@ -55,6 +61,10 @@ public class TestBase {
 	//=========== Common ======================
 	public TestUtilityHelper testUtilityHelper = new TestUtilityHelper();
 
+	public ExtentHtmlReporter htmlReporter;
+	public ExtentReports extent;
+	public ExtentTest test;
+	
 	// @BeforeSuite annotation describes this method has to run before all
 	// suites
 	@BeforeSuite
@@ -62,6 +72,22 @@ public class TestBase {
 		log.info("Delete file for screenshot folder.");
 		pageMethods.deleteFileInFolder();
 		Thread.sleep(3000);
+		
+		htmlReporter = new ExtentHtmlReporter("./reports/extent.html");
+		
+		htmlReporter.config().setEncoding("utf-8");
+		htmlReporter.config().setDocumentTitle("W2A Automation Reports");
+		htmlReporter.config().setReportName("Automation Test Results");
+		htmlReporter.config().setTheme(Theme.DARK);
+
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+
+		extent.setSystemInfo("Automation Tester", "Rahul Arora");
+		extent.setSystemInfo("Orgainzation", "Way2Automation");
+		extent.setSystemInfo("Build No", "W2A-1234");
+		
+
 	}
 
 	// Use Test Initialize to run code before running each test
@@ -77,8 +103,10 @@ public class TestBase {
 		log.info(" Maximize the browser.");
 		driver.manage().window().maximize();
 		Thread.sleep(1000);
+		
 		log.info("Open URL function.");
-		OpenUrl(testDataCommon.url_staging);
+		//OpenUrl(testDataCommon.url_staging);
+		driver.navigate().to("https://www.flipkart.com");   //https://www.flipkart.com
 		Thread.sleep(5000);
 		/*log.info("Close adverting popup when advertising popup is  display on screen.");
 		//pageMethods.closeAdvertisingPopup();
@@ -96,11 +124,15 @@ public class TestBase {
 		pageMethods.LanguageSelectionInPublic();
 		Thread.sleep(3000);*/
 		
+		
+
+		
 	}
 
 	// Use TestCleanup to run code after each test has run
 	@AfterTest(alwaysRun = true)
 	public void closeBrowser() throws Exception {
+		
 		if (driver != null) {
 			log.info("Close the browser.");
 			driver.quit();
@@ -188,4 +220,12 @@ public class TestBase {
 		return lang;
 	}
 
+	
+	
+	@AfterSuite
+	public void aftersuit() throws Exception
+	{
+		extent.flush();
+	}
+	
 }
