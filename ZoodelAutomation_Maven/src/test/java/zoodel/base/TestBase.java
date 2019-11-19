@@ -35,12 +35,12 @@ import zoodel.helpers.*;
 public class TestBase {
 
 	public static WebDriver driver;
-	//public static HtmlUnitDriver driver1;
+	// public static HtmlUnitDriver driver1;
 	public static RemoteWebDriver driver2;
 	private static Logger log = Logger.getLogger(TestBase.class.getName());
-	//private static Logger log = Logger.getLogger("devpinoyLogger");
+	// private static Logger log = Logger.getLogger("devpinoyLogger");
 	public static enum_language lang;
-	
+
 	// ========================= pageControls objects =========================
 	public static PageControls_Common pageControlsCommon = new PageControls_Common();
 	public static PageControls_Login pageControlsLogin = new PageControls_Login();
@@ -54,17 +54,17 @@ public class TestBase {
 	public static Page_Methods pageMethods = new Page_Methods();
 	public static Framework_Methods frameworkMethods = new Framework_Methods();
 	public static PageMethod_SearchPage pageMethodSearchPage = new PageMethod_SearchPage();
-	
+
 	// ========================= pageTest data objects =========================
 	public static TestData_Common testDataCommon = new TestData_Common();
 	public static TestData_Login testDataLogin = new TestData_Login();
-	//=========== Common ======================
+	// =========== Common ======================
 	public TestUtilityHelper testUtilityHelper = new TestUtilityHelper();
 
 	public ExtentHtmlReporter htmlReporter;
 	public ExtentReports extent;
 	public ExtentTest test;
-	
+
 	// @BeforeSuite annotation describes this method has to run before all
 	// suites
 	@BeforeSuite
@@ -72,21 +72,19 @@ public class TestBase {
 		log.info("Delete file for screenshot folder.");
 		pageMethods.deleteFileInFolder();
 		Thread.sleep(3000);
-		
 		htmlReporter = new ExtentHtmlReporter("./reports/extent.html");
-		
-		htmlReporter.config().setEncoding("utf-8");
-		htmlReporter.config().setDocumentTitle("W2A Automation Reports");
-		htmlReporter.config().setReportName("Automation Test Results");
-		htmlReporter.config().setTheme(Theme.DARK);
+
+	//	htmlReporter.config().setEncoding("utf-8");
+	//	htmlReporter.config().setDocumentTitle("W2A Automation Reports");
+	//	htmlReporter.config().setReportName("Automation Test Results");
+	//	htmlReporter.config().setTheme(Theme.STANDARD);
 
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 
-		extent.setSystemInfo("Automation Tester", "Rahul Arora");
-		extent.setSystemInfo("Orgainzation", "Way2Automation");
-		extent.setSystemInfo("Build No", "W2A-1234");
-		
+		// extent.setSystemInfo("Automation Tester", "Rahul Arora");
+		// extent.setSystemInfo("Orgainzation", "Way2Automation");
+		// extent.setSystemInfo("Build No", "W2A-1234");
 
 	}
 
@@ -103,36 +101,31 @@ public class TestBase {
 		log.info(" Maximize the browser.");
 		driver.manage().window().maximize();
 		Thread.sleep(1000);
-		
-		log.info("Open URL function.");
-		//OpenUrl(testDataCommon.url_staging);
-		driver.navigate().to("https://www.flipkart.com");   //https://www.flipkart.com
-		Thread.sleep(5000);
-		/*log.info("Close adverting popup when advertising popup is  display on screen.");
-		//pageMethods.closeAdvertisingPopup();
-		Thread.sleep(3000);
-		log.info("Language selection");
-	
-		if (strLang == null) {
-			strLang = "en";
-		}
-		lang = getEnum_Language(strLang);
-		System.out.println("Language :--" + lang);
-		Thread.sleep(2000);
-		
-		log.info("Select language from public side");
-		pageMethods.LanguageSelectionInPublic();
-		Thread.sleep(3000);*/
-		
-		
 
+		log.info("Open URL function.");
+		// OpenUrl(testDataCommon.url_staging);
+		driver.navigate().to("https://www.zoodel.com"); // https://www.flipkart.com
+		Thread.sleep(5000);
+		/*
+		 * log.
+		 * info("Close adverting popup when advertising popup is  display on screen."
+		 * ); //pageMethods.closeAdvertisingPopup(); Thread.sleep(3000);
+		 * log.info("Language selection");
+		 * 
+		 * if (strLang == null) { strLang = "en"; } lang =
+		 * getEnum_Language(strLang); System.out.println("Language :--" + lang);
+		 * Thread.sleep(2000);
+		 * 
+		 * log.info("Select language from public side");
+		 * pageMethods.LanguageSelectionInPublic(); Thread.sleep(3000);
+		 */
 		
 	}
 
 	// Use TestCleanup to run code after each test has run
 	@AfterTest(alwaysRun = true)
 	public void closeBrowser() throws Exception {
-		
+
 		if (driver != null) {
 			log.info("Close the browser.");
 			driver.quit();
@@ -153,7 +146,8 @@ public class TestBase {
 	public static WebDriver getBrowser(String browserName) throws Exception {
 
 		if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
 			return driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "./FirefoxDriver/geckodriver-v0.17.0-win32/geckodriver.exe");
@@ -163,11 +157,12 @@ public class TestBase {
 			DesiredCapabilities capabilities1 = DesiredCapabilities.internetExplorer();
 			// Method and Description - void setCapability(java.lang.String
 			// capabilityName, boolean value)
-			//capabilities1.setCapability("nativeEvents", false);    
-			//capabilities1.setCapability("unexpectedAlertBehaviour", "accept");
-			//capabilities1.setCapability("ignoreProtectedModeSettings", true);
-			//capabilities1.setCapability("disable-popup-blocking", true);
-			//capabilities1.setCapability("enablePersistentHover", true);
+			// capabilities1.setCapability("nativeEvents", false);
+			// capabilities1.setCapability("unexpectedAlertBehaviour",
+			// "accept");
+			// capabilities1.setCapability("ignoreProtectedModeSettings", true);
+			// capabilities1.setCapability("disable-popup-blocking", true);
+			// capabilities1.setCapability("enablePersistentHover", true);
 
 			capabilities1.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			capabilities1.setJavascriptEnabled(true);
@@ -177,7 +172,7 @@ public class TestBase {
 			capabilities1.setCapability("platform", Platform.WIN10);
 			// capabilities1.setCapability("video", "True");
 			// capabilities1.setCapability("requireWindowFocus", true);
-			
+
 			// Among the facilities provided by the System class are standard
 			// input, standard output, and error output streams; access to
 			// externally defined "properties"; a means of loading files and
@@ -188,7 +183,7 @@ public class TestBase {
 			// driver2.setFileDetector(new LocalFileDetector());
 			// driver = driver2;
 			return driver = new InternetExplorerDriver(capabilities1);
-		
+
 		} else if (browserName.equalsIgnoreCase("edge")) {
 			Thread.sleep(2000);
 			System.setProperty("webdriver.edge.driver", "./edgeDriver/MicrosoftWebDriver.exe");
@@ -220,12 +215,10 @@ public class TestBase {
 		return lang;
 	}
 
-	
-	
 	@AfterSuite
-	public void aftersuit() throws Exception
-	{
+	public void aftersuit() throws Exception {
+
 		extent.flush();
 	}
-	
+
 }

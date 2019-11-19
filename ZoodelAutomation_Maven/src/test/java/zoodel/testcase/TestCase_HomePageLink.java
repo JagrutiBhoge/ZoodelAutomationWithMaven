@@ -58,6 +58,7 @@ public class TestCase_HomePageLink extends TestBase {
 			String failureLogg = "TEST CASE FAILED";
 			Markup m = MarkupHelper.createLabel(failureLogg, ExtentColor.RED);
 			test.log(Status.FAIL, m);
+			
 
 		} else if (result.getStatus() == ITestResult.SKIP) {
 
@@ -67,6 +68,7 @@ public class TestCase_HomePageLink extends TestBase {
 
 			Markup m = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
 			test.skip(m);
+			test.skip(result.getThrowable());
 
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 
@@ -81,7 +83,7 @@ public class TestCase_HomePageLink extends TestBase {
 
 	}
 
-	@Test(dataProviderClass = TestUtilityHelper.class, dataProvider = "Link", enabled = true)
+	@Test(dataProviderClass = TestUtilityHelper.class, dataProvider = "Link", enabled = false)
 	public void CheckTitleOfHomePageLink(Hashtable<String, String> data) throws Exception {
 		// test = extent.createTest("HOme page Title");
 		SoftAssert sa = new SoftAssert();
@@ -102,7 +104,7 @@ public class TestCase_HomePageLink extends TestBase {
 
 	}
 
-	@Test(dataProviderClass = TestUtilityHelper.class, dataProvider = "Link", enabled = true)
+	@Test(dataProviderClass = TestUtilityHelper.class, dataProvider = "Link", enabled = false)
 	public void CheckTitleOfHomePageLink2(Hashtable<String, String> data) throws Exception {
 
 		SoftAssert sa = new SoftAssert();
@@ -168,4 +170,15 @@ public class TestCase_HomePageLink extends TestBase {
 		System.out.println("After 3rd Assert False");
 
 	}
+
+	@Test
+	public void checkBackground() throws Exception
+	{
+		
+		String textColor = driver.findElement(By.xpath("//section[@id = 'features']//h2/span")).getCssValue("color");
+	    String bkgColor = driver.findElement(By.xpath("//footer[@id='newFooter']")).getCssValue("background-color");
+	    System.out.println("TextColor : " + textColor );
+	    System.out.println("Background Color : " + bkgColor);
+	}
+
 }
